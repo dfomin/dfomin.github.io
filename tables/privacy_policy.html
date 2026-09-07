@@ -1,14 +1,330 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tables — Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Tables iOS app and dfomin.com, under the EU General Data Protection Regulation.">
+<meta name="theme-color" content="#0079bf">
+<style>
+  :root {
+    --bg: #ffffff; --surface: #f6f8fa; --text: #1a1d21; --muted: #5c6670;
+    --border: #e2e6ea; --accent: #0069a8; --accent-contrast: #ffffff;
+    --warn-bg: #fff4d6; --warn-border: #e0b84a; --warn-text: #5c4708;
+    --radius: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181c; --surface: #1d2126; --text: #e8ebee; --muted: #9aa4ae;
+      --border: #2c3238; --accent: #4aa8e0; --accent-contrast: #10141a;
+      --warn-bg: #3a2f12; --warn-border: #7a6320; --warn-text: #f0d99a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; padding: 0 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header {
+    padding: 56px 0 32px; border-bottom: 1px solid var(--border); margin-bottom: 40px;
+  }
+  .eyebrow {
+    font-size: 14px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 8px;
+  }
+  h1 { font-size: 40px; line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.02em; }
+  header p { margin: 0; color: var(--muted); }
+  h2 { font-size: 24px; letter-spacing: -0.01em; margin: 48px 0 14px; }
+  h3 { font-size: 18px; margin: 28px 0 8px; }
+  p { margin: 0 0 16px; }
+  a { color: var(--accent); }
+  address { font-style: normal; margin: 0 0 16px; }
+  ul { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  .hint { color: var(--muted); font-size: 15px; }
+  .todo {
+    background: var(--warn-bg); border: 1px solid var(--warn-border);
+    color: var(--warn-text); border-radius: var(--radius);
+    padding: 14px 18px; margin: 0 0 16px; font-size: 15px;
+  }
+  table {
+    width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 15px;
+  }
+  th, td {
+    text-align: left; vertical-align: top; padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  th { color: var(--muted); font-weight: 600; }
+  .scroll { overflow-x: auto; }
+  footer {
+    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 15px;
+  }
+  @media (max-width: 600px) { h1 { font-size: 32px; } body { font-size: 16px; } }
+</style>
+</head>
 <body>
+<div class="wrap">
 
-<h1>Privacy policy</h1>
-<p>
-    The app doesn't store any private information.<br/>
-    The app doesn't store anything to cloud, all data is stored on the user device.
-    The app collects anonymous information about using the app: how often is runs, which screen appears, length of the session etc.
-    The app collects performance information and debug information in case if crash.
-</p>
+  <header>
+    <p class="eyebrow">Tables for iOS &amp; dfomin.com</p>
+    <h1>Privacy Policy</h1>
+    <p>Last updated: <span id="updated">7 September 2026</span></p>
+  </header>
 
+  <p>
+    This policy explains what personal data is processed when you use the
+    <strong>Tables</strong> iOS app or visit <strong>dfomin.com</strong>, on what
+    legal basis, and what rights you have. It is written to meet Articles 12–14 of
+    the EU General Data Protection Regulation (GDPR).
+  </p>
+
+  <h2>1. Controller</h2>
+
+  <address>
+    Dmitrii Fomin<br>
+    Waldstrasse 76<br>
+    12621 Berlin<br>
+    Deutschland<br>
+    E-Mail: <a href="mailto:fomin.dm@gmail.com">fomin.dm@gmail.com</a>
+  </address>
+
+  <div class="todo">
+    <strong>Fill in the address before publishing</strong> — it must match your
+    <a href="../impressum.html">Impressum</a>.
+  </div>
+
+  <p class="hint">
+    No data protection officer has been appointed. This is not required: fewer than
+    twenty people are regularly engaged in automated processing here
+    (Art. 37 GDPR, § 38 BDSG).
+  </p>
+
+  <h2>2. Your tournament data stays on your device</h2>
+
+  <p>
+    Everything you enter into the app — tournament names, team names, scores, dates,
+    locations and referees — is stored <strong>only in the app's local storage on
+    your device</strong>. It is never transmitted, never stored on a server, and is
+    not accessible to anyone else. There is no account and no cloud sync.
+  </p>
+
+  <p>
+    Because of this, deleting the app deletes your tournaments permanently, and they
+    cannot be recovered.
+  </p>
+
+  <h2>3. Usage statistics in the app</h2>
+
+  <p>
+    The app uses <strong>Google Firebase Analytics</strong> to understand how it is
+    used, so that problems can be found and features prioritised. The following is
+    collected:
+  </p>
+
+  <div class="scroll">
+    <table>
+      <tr><th>Data</th><th>Examples</th></tr>
+      <tr>
+        <td>App instance identifier</td>
+        <td>A randomly generated ID assigned to your installation of the app</td>
+      </tr>
+      <tr>
+        <td>Device and system</td>
+        <td>Device model, iOS version, language, approximate country</td>
+      </tr>
+      <tr>
+        <td>Usage events</td>
+        <td>App opens, screens viewed, session length, actions such as creating a
+            tournament or adding a team</td>
+      </tr>
+      <tr>
+        <td>App state</td>
+        <td>Number of tournaments, teams and games you have; selected colour theme;
+            app version</td>
+      </tr>
+      <tr>
+        <td>Diagnostics</td>
+        <td>Errors while saving or loading data, including error codes and available
+            free disk space</td>
+      </tr>
+    </table>
+  </div>
+
+  <p>
+    <strong>Team and tournament names are never transmitted.</strong> They are treated
+    as personal data, because teams are often named after real people, and they stay
+    on your device.
+  </p>
+
+  <p>
+    This data is <em>pseudonymous</em>, not anonymous: it is tied to a random
+    identifier for your app installation rather than to your name, but it remains
+    personal data under the GDPR.
+  </p>
+
+  <div class="todo">
+    <strong>Legal basis — decide this before publishing.</strong> Storing an
+    identifier on your device for analytics requires consent under § 25(1) TDDDG,
+    and consent under Art. 6(1)(a) GDPR for the processing that follows. If the app
+    does not ask for consent, the honest basis to state is legitimate interest under
+    Art. 6(1)(f), which is contested for analytics in Germany. See the note sent with
+    this file: the durable fix is an opt-in prompt in the app, not wording here.
+  </div>
+
+  <p>
+    <strong>Recipient:</strong> Google Ireland Limited, Gordon House, Barrow Street,
+    Dublin 4, Ireland, and Google LLC in the United States.
+    <strong>Retention:</strong> <span class="hint">[check your Firebase setting — GA4
+    offers 2 or 14 months for event data]</span>.
+  </p>
+
+  <h2>4. Feedback sent from the app</h2>
+
+  <p>
+    The About screen has a <strong>Feedback</strong> form. If you use it, the message
+    you write is transmitted to a private channel on <strong>Telegram</strong>. The
+    same channel receives automatic technical reports when data migration fails, which
+    contain error descriptions but no tournament or team names.
+  </p>
+
+  <p>
+    The feedback form is anonymous — it carries no identifier and cannot be replied
+    to. Please do not include personal details in it. If you want an answer, use email
+    instead, which is covered in section 6.
+  </p>
+
+  <p>
+    <strong>Legal basis:</strong> your consent through the voluntary act of sending
+    the message, Art. 6(1)(a) GDPR.
+    <strong>Recipient:</strong> Telegram FZ-LLC, Dubai, United Arab Emirates.
+  </p>
+
+  <h2>5. Donations</h2>
+
+  <p>
+    Donations are made through Apple's in-app purchase system. Payment and billing
+    data is processed entirely by Apple; it is never received here. Only the
+    aggregated fact that a purchase completed is visible, with no identifying details.
+    See Apple's privacy policy for how Apple handles that data.
+  </p>
+
+  <h2>6. Contacting by email</h2>
+
+  <p>
+    If you email the address in section 1, your message, your email address and any
+    details you include are processed for the purpose of answering you. The legal
+    basis is legitimate interest in responding to enquiries, Art. 6(1)(f) GDPR, or
+    Art. 6(1)(b) where your message concerns the use of the app. Messages are deleted
+    once the matter is settled and no retention obligation applies.
+  </p>
+
+  <h2>7. The website dfomin.com</h2>
+
+  <p>
+    These pages set <strong>no cookies</strong>, use <strong>no tracking</strong>, and
+    load <strong>no external resources</strong> — no fonts, scripts or images from
+    third-party servers. Nothing about your visit is transmitted to anyone else.
+  </p>
+
+  <p>
+    The hosting provider records standard server log data when a page is requested:
+    IP address, date and time, the file requested, the amount of data transferred,
+    the HTTP status, the referring page and the browser identification. This is
+    necessary to deliver the page and to keep the server secure and stable.
+  </p>
+
+  <p>
+    <strong>Legal basis:</strong> legitimate interest, Art. 6(1)(f) GDPR.
+  </p>
+
+  <div class="todo">
+    <strong>Name your hosting provider here</strong> and state the log retention
+    period. If the provider processes the logs on your behalf you need a data
+    processing agreement (Art. 28 GDPR) with them — most providers offer one in the
+    account settings.
+  </div>
+
+  <h2>8. Transfers outside the EU</h2>
+
+  <p>
+    Google LLC is located in the United States. Transfers are covered by the European
+    Commission's adequacy decision of 10 July 2023 for the EU–US Data Privacy
+    Framework, under which Google LLC is certified.
+  </p>
+
+  <p>
+    Telegram FZ-LLC is located in the United Arab Emirates, for which no adequacy
+    decision exists. Transfers therefore rest on your explicit consent for the
+    specific transfer, Art. 49(1)(a) GDPR, given by choosing to send a feedback
+    message.
+  </p>
+
+  <h2>9. Your rights</h2>
+
+  <p>Under the GDPR you have the right to:</p>
+
+  <ul>
+    <li>access the personal data held about you (Art. 15);</li>
+    <li>have inaccurate data corrected (Art. 16);</li>
+    <li>have your data erased (Art. 17);</li>
+    <li>restrict processing (Art. 18);</li>
+    <li>receive your data in a portable format (Art. 20);</li>
+    <li>object to processing based on legitimate interest (Art. 21);</li>
+    <li>withdraw consent at any time, without affecting processing already carried
+        out (Art. 7(3)).</li>
+  </ul>
+
+  <p>
+    To exercise any of these, email the address in section 1. Note that analytics data
+    is tied to a random installation identifier, so to act on a request it may be
+    necessary to ask you for that identifier — otherwise your records cannot be
+    located.
+  </p>
+
+  <p>
+    You can stop all analytics collection at any time by deleting the app. Reinstalling
+    generates a new identifier that cannot be linked to the previous one.
+  </p>
+
+  <h2>10. Complaints</h2>
+
+  <p>
+    You have the right to lodge a complaint with a data protection supervisory
+    authority, in particular in the EU member state where you live or work
+    (Art. 77 GDPR).
+  </p>
+
+  <div class="todo">
+    <strong>Name the authority for your federal state.</strong> Competence follows
+    your place of business — for example the Berliner Beauftragte für Datenschutz und
+    Informationsfreiheit if you are in Berlin, or the Bayerisches Landesamt für
+    Datenschutzaufsicht if you are in Bavaria. Put its name, address and website here.
+  </div>
+
+  <h2>11. Changes to this policy</h2>
+
+  <p>
+    This policy may be updated when the app changes or the legal position does. The
+    date at the top always shows the current version.
+  </p>
+
+  <footer>
+    <p>
+      <a href="support.html">Support</a> &middot;
+      <a href="../impressum.html">Impressum</a>
+    </p>
+    <p>&copy; 2017&ndash;<span id="year">2026</span> Dmitrii Fomin</p>
+  </footer>
+
+</div>
+<script>
+  (function () {
+    var year = document.getElementById("year");
+    if (year) { year.textContent = new Date().getFullYear(); }
+  })();
+</script>
 </body>
 </html>
