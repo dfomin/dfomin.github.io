@@ -1,12 +1,378 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tables — Support</title>
+<meta name="description" content="Support and frequently asked questions for Tables, a free iOS app for creating and managing sport tournaments.">
+<meta name="theme-color" content="#0079bf">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f6f8fa;
+    --text: #1a1d21;
+    --muted: #5c6670;
+    --border: #e2e6ea;
+    --accent: #0069a8;
+    --accent-contrast: #ffffff;
+    --radius: 10px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181c;
+      --surface: #1d2126;
+      --text: #e8ebee;
+      --muted: #9aa4ae;
+      --border: #2c3238;
+      --accent: #4aa8e0;
+      --accent-contrast: #10141a;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 0 20px 80px;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; }
+
+  header {
+    padding: 56px 0 32px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-size: 14px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 8px;
+  }
+
+  h1 { font-size: 40px; line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.02em; }
+
+  header p { margin: 0; color: var(--muted); font-size: 18px; }
+
+  h2 {
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    margin: 48px 0 16px;
+    padding-top: 8px;
+  }
+
+  h3 { font-size: 18px; margin: 28px 0 6px; }
+
+  p { margin: 0 0 16px; }
+
+  a { color: var(--accent); }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin: 0 0 24px;
+  }
+
+  .contact-address {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: var(--accent-contrast);
+    text-decoration: none;
+    margin: 4px 0 16px;
+    cursor: pointer;
+  }
+
+  .contact-address:hover { opacity: .9; }
+
+  .hint { color: var(--muted); font-size: 15px; margin: 0; }
+
+  ul { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+
+  details {
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+  }
+
+  details summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  details summary::-webkit-details-marker { display: none; }
+
+  details summary::after {
+    content: "+";
+    color: var(--muted);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+    flex: none;
+  }
+
+  details[open] summary::after { content: "\2212"; }
+
+  details p { margin: 12px 0 4px; color: var(--text); }
+
+  .issue { margin-bottom: 28px; }
+  .issue p:last-child { margin-bottom: 0; }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 32px; }
+    body { font-size: 16px; }
+  }
+</style>
+</head>
 <body>
+<div class="wrap">
 
-<h1>Support</h1>
-<p>
-    Use About page of the app for support.<br/>
-    You also can send the email to fomin.dm at gmail.com.
-</p>
+  <header>
+    <p class="eyebrow">Tables for iOS</p>
+    <h1>Support</h1>
+    <p>Tables is a free app for creating and managing sport tournaments. No ads, no accounts.</p>
+  </header>
 
+  <h2>Get in touch</h2>
+
+  <div class="card">
+    <p>Email me directly. I read everything, but I'm one person, so a reply can take a few days.</p>
+
+    <a class="contact-address" id="contact-link">Email</a>
+    <noscript>
+      <p class="hint">Please enable JavaScript to open the contact link.</p>
+    </noscript>
+
+    <p class="hint">
+      To help me answer quickly, please include your <strong>app version</strong>
+      (Settings → About), your <strong>iOS version</strong>, and your
+      <strong>device model</strong>. The button above fills these in for you.
+    </p>
+  </div>
+
+  <p>
+    The app also has a <strong>Feedback</strong> form on the About page. That one is
+    <em>anonymous</em>, which means I can read it but I cannot reply to it. If you want
+    an answer, use email.
+  </p>
+
+  <h2>Common problems</h2>
+
+  <div class="issue">
+    <h3>Buttons don't respond, or I can't add a team</h3>
+    <p>
+      This was a bug on iOS 16 and iOS 17 in app versions 4.0.5 and earlier: the
+      confirm button was missing from the "Add team" dialog, and some lists rendered
+      blank. It is fixed. Update to the latest version from the App Store and it will
+      work normally.
+    </p>
+  </div>
+
+  <div class="issue">
+    <h3>My tournaments disappeared after updating</h3>
+    <p>
+      Version 4.0 moved all data to a new storage format. This happens once,
+      automatically, the first time you open the new version, and it can take a few
+      seconds if you have many tournaments.
+    </p>
+    <p>
+      If the app shows a warning that some tournaments couldn't be loaded, your data
+      has not been deleted — update to the latest version, which recovers them. If it
+      says your old tournaments can't be opened at all, please email me before deleting
+      or reinstalling the app.
+    </p>
+  </div>
+
+  <div class="issue">
+    <h3>Points or standings look wrong since the update</h3>
+    <p>
+      A small number of tournaments lost their custom scoring settings during the move
+      to the new storage format. You can set them again from your tournament →
+      <strong>Edit</strong> → <strong>Scoring points system</strong> and
+      <strong>Ordering rules</strong>. If your tournament used a scoring system you
+      created yourself and you can't find it, email me — I can help recover it.
+    </p>
+  </div>
+
+  <div class="issue">
+    <h3>I deleted the app and lost my tournaments</h3>
+    <p>
+      All data is stored on your device only. There is no account, no cloud copy, and
+      no backup on my side, so deleting the app deletes the tournaments with it.
+      Unfortunately this cannot be recovered. Sync and export are on the roadmap.
+    </p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+
+  <h3>Tournaments</h3>
+
+  <details>
+    <summary>How do I create a cup (knockout) tournament?</summary>
+    <p>A cup is created from a league. Add your teams first, then tap "Cup" to convert the tournament into a knockout bracket. Winners advance to the next round automatically.</p>
+  </details>
+
+  <details>
+    <summary>Why is the "Cup" button disabled?</summary>
+    <p>Conversion to a cup is only possible before any games are added. You also need a power-of-two number of teams: 4, 8, 16, and so on. Add or remove teams until the count matches, then convert. Note that converting to a cup can't be undone.</p>
+  </details>
+
+  <details>
+    <summary>How do I delete a tournament?</summary>
+    <p>Swipe left on the tournament in the tournament list.</p>
+  </details>
+
+  <details>
+    <summary>How do I copy a tournament?</summary>
+    <p>Swipe left on the tournament in the tournament list and tap "Copy". A duplicate with all teams and settings is created, so you can change it without affecting the original.</p>
+  </details>
+
+  <h3>Teams and games</h3>
+
+  <details>
+    <summary>How do I delete a team?</summary>
+    <p>Tap the team in the results table and select "Delete". All games with that team will be deleted as well.</p>
+  </details>
+
+  <details>
+    <summary>How do I give a team bonus or penalty points?</summary>
+    <p>Tap the team in the results table and select "Bonus points". Enter a positive value to add points or a negative value to deduct them.</p>
+  </details>
+
+  <details>
+    <summary>How do I delete a game?</summary>
+    <p>Swipe left on the game in the games list.</p>
+  </details>
+
+  <h3>Scoring and standings</h3>
+
+  <details>
+    <summary>I can't find the correct points scoring system for my sport.</summary>
+    <p>You can create your own. Open your tournament → tap "Edit" → select "Scoring points system" → choose an existing system or create your own.</p>
+  </details>
+
+  <details>
+    <summary>How does sorting work when teams have the same number of points?</summary>
+    <p>The default sorting uses these criteria in order: points, goal difference, head-to-head games, goals scored, number of wins. You can choose a different one: open your tournament → tap "Edit" → select "Ordering rules".</p>
+  </details>
+
+  <h3>Your data</h3>
+
+  <details>
+    <summary>Where is my data stored? Can I back it up or share it?</summary>
+    <p>At this time all data is stored in your device's local storage. You will lose everything if you delete the app, and there is currently no way to back up, export or share a tournament.</p>
+  </details>
+
+  <h3>Support and the project</h3>
+
+  <details>
+    <summary>How do I report a bug?</summary>
+    <p>Send feedback or an email from the About page in the app, or email me using the address at the top of this page.</p>
+  </details>
+
+  <details>
+    <summary>What's the difference between feedback and email?</summary>
+    <p>Feedback is anonymous, so I can read it but I can't reply to it. Use email if you want an answer.</p>
+  </details>
+
+  <details>
+    <summary>I need a feature the app doesn't have.</summary>
+    <p>Send feedback or an email from the About page. It may well be implemented in a future release — most of what's been added came from user requests.</p>
+  </details>
+
+  <details>
+    <summary>The app isn't available in my language. Will it be localized?</summary>
+    <p>It's not planned right now. Send me your language by feedback or email so I can see which languages are actually needed.</p>
+  </details>
+
+  <details>
+    <summary>Do I get extra features if I make a donation?</summary>
+    <p>No. The app is completely free and donations only support the developer.</p>
+  </details>
+
+  <details>
+    <summary>How can I support the project?</summary>
+    <p>You can make a donation from the About page, write a review or rate the app, recommend it to someone, or send useful feedback.</p>
+  </details>
+
+  <details>
+    <summary>My question isn't answered here.</summary>
+    <p>Email me using the address at the top of this page.</p>
+  </details>
+
+  <h2>What's planned</h2>
+
+  <p>Frequently requested and being worked on or considered:</p>
+  <ul>
+    <li>Team icons and badges</li>
+    <li>Cups with any number of teams, not just 4, 8 or 16</li>
+    <li>A league stage followed by a knockout playoff</li>
+    <li>Promotion and relegation zones in the standings</li>
+    <li>Backup, export and sharing of tournaments</li>
+  </ul>
+  <p class="hint">Not currently planned: localization into other languages.</p>
+
+  <footer>
+    <p>
+      Tables is free, contains no ads, and collects no personal data.
+      All tournament data stays on your device.
+    </p>
+    <p>&copy; <span id="year">2026</span> Dmitry Fomin</p>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var user = ["fomin", "dm"].join(".");
+    var domain = ["gmail", "com"].join(".");
+    var address = user + String.fromCharCode(64) + domain;
+
+    var body = [
+      "App version: ",
+      "iOS version: ",
+      "Device: ",
+      "",
+      "What happened:",
+      ""
+    ].join("\n");
+
+    var link = document.getElementById("contact-link");
+    if (link) {
+      link.href = "mailto:" + address +
+        "?subject=" + encodeURIComponent("Tables — support") +
+        "&body=" + encodeURIComponent(body);
+    }
+
+    var year = document.getElementById("year");
+    if (year) { year.textContent = new Date().getFullYear(); }
+  })();
+</script>
 </body>
 </html>
