@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impressum — dfomin.com</title>
+<meta name="description" content="Legal notice (Impressum) according to § 5 DDG.">
+<meta name="theme-color" content="#0079bf">
+<style>
+  :root {
+    --bg: #ffffff; --surface: #f6f8fa; --text: #1a1d21; --muted: #5c6670;
+    --border: #e2e6ea; --accent: #0069a8; --accent-contrast: #ffffff;
+    --warn-bg: #fff4d6; --warn-border: #e0b84a; --warn-text: #5c4708;
+    --radius: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181c; --surface: #1d2126; --text: #e8ebee; --muted: #9aa4ae;
+      --border: #2c3238; --accent: #4aa8e0; --accent-contrast: #10141a;
+      --warn-bg: #3a2f12; --warn-border: #7a6320; --warn-text: #f0d99a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; padding: 0 20px 80px; background: var(--bg); color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header {
+    padding: 56px 0 32px; border-bottom: 1px solid var(--border); margin-bottom: 40px;
+  }
+  .eyebrow {
+    font-size: 14px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 8px;
+  }
+  h1 { font-size: 40px; line-height: 1.15; margin: 0; letter-spacing: -0.02em; }
+  h2 { font-size: 22px; letter-spacing: -0.01em; margin: 40px 0 12px; }
+  p { margin: 0 0 16px; }
+  a { color: var(--accent); }
+  address { font-style: normal; margin: 0 0 16px; }
+  .hint { color: var(--muted); font-size: 15px; }
+  .todo {
+    background: var(--warn-bg); border: 1px solid var(--warn-border);
+    color: var(--warn-text); border-radius: var(--radius);
+    padding: 14px 18px; margin: 0 0 16px; font-size: 15px;
+  }
+  footer {
+    margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 15px;
+  }
+  @media (max-width: 600px) { h1 { font-size: 32px; } body { font-size: 16px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">dfomin.com</p>
+    <h1>Impressum</h1>
+  </header>
+
+  <p class="hint">Angaben gemäß § 5 DDG — information according to § 5 German Digital Services Act.</p>
+
+  <h2>Diensteanbieter / Service provider</h2>
+
+  <div class="todo">
+    <strong>Fill in before publishing.</strong> § 5 DDG requires a real postal
+    address at which you can be served. A P.O. box is not sufficient. This is the
+    same address the App Store already publishes for you.
+  </div>
+
+  <address>
+    Dmitrii Fomin<br>
+    Waldstrasse 76<br>
+    12621, Berlin <br>
+    Deutschland
+  </address>
+
+  <h2>Kontakt / Contact</h2>
+
+  <p>
+    E-Mail: <a href="mailto:fomin.dm@gmail.com">fomin.dm@gmail.com</a>
+  </p>
+
+  <div class="todo">
+    <strong>Second contact channel.</strong> § 5 DDG asks for details enabling
+    "fast electronic contact and direct communication". Email alone is usually
+    accepted after ECJ C-649/17, but a phone number or a stated callback option
+    removes the argument. Add a number here, or delete this box if you accept the
+    residual risk.
+  </div>
+
+  <h2>Umsatzsteuer / VAT</h2>
+
+  <p>
+    Kleinunternehmer gemäß § 19 UStG — es wird keine Umsatzsteuer ausgewiesen.
+    Eine Umsatzsteuer-Identifikationsnummer nach § 27a UStG liegt nicht vor.
+  </p>
+
+  <p class="hint">
+    Small business under § 19 German VAT Act; no VAT is charged and no VAT ID exists.
+    A VAT ID only has to be listed in the Impressum if you actually have one.
+  </p>
+
+  <h2>Verbraucherstreitbeilegung / Consumer dispute resolution</h2>
+
+  <p>
+    Es besteht keine Bereitschaft und keine Verpflichtung zur Teilnahme an einem
+    Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle.
+  </p>
+
+  <p class="hint">
+    Not willing and not obliged to take part in consumer arbitration proceedings.
+    As a business with ten or fewer employees you are exempt from the information
+    duty under § 36 VSBG, so this paragraph is optional — it is included because it
+    is conventional and prevents the question being asked.
+  </p>
+
+  <footer>
+    <p>
+      <a href="/tables/support.html">Support</a> &middot;
+      <a href="/tables/privacy_policy.html">Privacy policy</a>
+    </p>
+    <p>&copy; 2017&ndash;<span id="year">2026</span> Dmitrii Fomin</p>
+  </footer>
+
+</div>
+<script>
+  (function () {
+    var year = document.getElementById("year");
+    if (year) { year.textContent = new Date().getFullYear(); }
+  })();
+</script>
+</body>
+</html>
