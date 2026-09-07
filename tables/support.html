@@ -83,22 +83,47 @@
     margin: 0 0 24px;
   }
 
-  .contact-address {
+  .card p:last-child { margin-bottom: 0; }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0 10px;
+  }
+
+  .btn {
     display: inline-block;
-    font-size: 20px;
+    font: inherit;
     font-weight: 600;
-    padding: 12px 20px;
+    padding: 12px 22px;
     border-radius: var(--radius);
-    background: var(--accent);
-    color: var(--accent-contrast);
+    border: 1px solid transparent;
     text-decoration: none;
-    margin: 4px 0 16px;
+    text-align: center;
     cursor: pointer;
   }
 
-  .contact-address:hover { opacity: .9; }
+  .btn-primary { background: var(--accent); color: var(--accent-contrast); }
 
-  .hint { color: var(--muted); font-size: 15px; margin: 0; }
+  .btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .btn:hover { opacity: .85; }
+
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .status {
+    min-height: 24px;
+    margin: 0 0 12px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  .hint { color: var(--muted); font-size: 15px; margin: 0 0 12px; }
 
   ul { margin: 0 0 16px; padding-left: 22px; }
   li { margin-bottom: 6px; }
@@ -147,6 +172,7 @@
   @media (max-width: 600px) {
     h1 { font-size: 32px; }
     body { font-size: 16px; }
+    .btn { flex: 1 1 100%; }
   }
 </style>
 </head>
@@ -162,30 +188,42 @@
   <h2>Get in touch</h2>
 
   <div class="card">
-    <p>Email me directly. I read everything, but I'm one person, so a reply can take a few days.</p>
+    <p>Questions, bug reports and feature requests are all welcome.</p>
 
-    <a class="contact-address" id="contact-link">Email</a>
+    <div class="actions">
+      <a class="btn btn-primary" id="contact-link">Email</a>
+      <button class="btn btn-secondary" id="copy-email" type="button">Copy email address</button>
+    </div>
+
+    <p class="status" id="copy-status" role="status" aria-live="polite"></p>
+
     <noscript>
-      <p class="hint">Please enable JavaScript to open the contact link.</p>
+      <p class="hint">Please enable JavaScript to use the contact buttons.</p>
     </noscript>
 
     <p class="hint">
-      To help me answer quickly, please include your <strong>app version</strong>
-      (Settings → About), your <strong>iOS version</strong>, and your
-      <strong>device model</strong>. The button above fills these in for you.
+      <strong>Email</strong> opens your mail app with a message template.
+      If no mail app is set up on your device, use <strong>Copy email address</strong>
+      and paste it wherever you read your mail.
+    </p>
+
+    <p class="hint">
+      Please include your <strong>app version</strong> (Settings → About), your
+      <strong>iOS version</strong>, and your <strong>device model</strong> —
+      most questions can't be answered without them.
     </p>
   </div>
 
   <p>
     The app also has a <strong>Feedback</strong> form on the About page. That one is
-    <em>anonymous</em>, which means I can read it but I cannot reply to it. If you want
-    an answer, use email.
+    <em>anonymous</em>: it can be read, but there is no way to reply to it. Use email
+    if you want an answer.
   </p>
 
   <h2>Common problems</h2>
 
   <div class="issue">
-    <h3>Buttons don't respond, or I can't add a team</h3>
+    <h3>Buttons don't respond, or a team can't be added</h3>
     <p>
       This was a bug on iOS 16 and iOS 17 in app versions 4.0.5 and earlier: the
       confirm button was missing from the "Add team" dialog, and some lists rendered
@@ -195,17 +233,17 @@
   </div>
 
   <div class="issue">
-    <h3>My tournaments disappeared after updating</h3>
+    <h3>Tournaments disappeared after updating</h3>
     <p>
       Version 4.0 moved all data to a new storage format. This happens once,
-      automatically, the first time you open the new version, and it can take a few
-      seconds if you have many tournaments.
+      automatically, the first time the new version is opened, and it can take a few
+      seconds with many tournaments.
     </p>
     <p>
-      If the app shows a warning that some tournaments couldn't be loaded, your data
-      has not been deleted — update to the latest version, which recovers them. If it
-      says your old tournaments can't be opened at all, please email me before deleting
-      or reinstalling the app.
+      If the app shows a warning that some tournaments couldn't be loaded, nothing has
+      been deleted — updating to the latest version recovers them. If it says the old
+      tournaments can't be opened at all, please get in touch before deleting or
+      reinstalling the app.
     </p>
   </div>
 
@@ -213,19 +251,19 @@
     <h3>Points or standings look wrong since the update</h3>
     <p>
       A small number of tournaments lost their custom scoring settings during the move
-      to the new storage format. You can set them again from your tournament →
+      to the new storage format. They can be set again from the tournament →
       <strong>Edit</strong> → <strong>Scoring points system</strong> and
-      <strong>Ordering rules</strong>. If your tournament used a scoring system you
-      created yourself and you can't find it, email me — I can help recover it.
+      <strong>Ordering rules</strong>. If the tournament used a scoring system created
+      by hand and it is no longer listed, get in touch — it can be recovered.
     </p>
   </div>
 
   <div class="issue">
-    <h3>I deleted the app and lost my tournaments</h3>
+    <h3>The app was deleted and the tournaments are gone</h3>
     <p>
-      All data is stored on your device only. There is no account, no cloud copy, and
-      no backup on my side, so deleting the app deletes the tournaments with it.
-      Unfortunately this cannot be recovered. Sync and export are on the roadmap.
+      All data is stored on the device only. There is no account, no cloud copy and no
+      backup held anywhere else, so deleting the app deletes the tournaments with it.
+      Unfortunately this cannot be recovered. Backup and export are on the roadmap.
     </p>
   </div>
 
@@ -293,27 +331,27 @@
 
   <details>
     <summary>How do I report a bug?</summary>
-    <p>Send feedback or an email from the About page in the app, or email me using the address at the top of this page.</p>
+    <p>Send feedback or an email from the About page in the app, or use the Email button at the top of this page.</p>
   </details>
 
   <details>
     <summary>What's the difference between feedback and email?</summary>
-    <p>Feedback is anonymous, so I can read it but I can't reply to it. Use email if you want an answer.</p>
+    <p>Feedback is anonymous, so it can be read but not replied to. Use email if you want an answer.</p>
   </details>
 
   <details>
     <summary>I need a feature the app doesn't have.</summary>
-    <p>Send feedback or an email from the About page. It may well be implemented in a future release — most of what's been added came from user requests.</p>
+    <p>Send feedback or an email from the About page. It may well be implemented in a future release — most of what has been added came from user requests.</p>
   </details>
 
   <details>
     <summary>The app isn't available in my language. Will it be localized?</summary>
-    <p>It's not planned right now. Send me your language by feedback or email so I can see which languages are actually needed.</p>
+    <p>It's not planned right now. Send your language by feedback or email so it's clear which languages are actually needed.</p>
   </details>
 
   <details>
     <summary>Do I get extra features if I make a donation?</summary>
-    <p>No. The app is completely free and donations only support the developer.</p>
+    <p>No. The app is completely free and donations only support development.</p>
   </details>
 
   <details>
@@ -323,12 +361,12 @@
 
   <details>
     <summary>My question isn't answered here.</summary>
-    <p>Email me using the address at the top of this page.</p>
+    <p>Use the Email button at the top of this page.</p>
   </details>
 
   <h2>What's planned</h2>
 
-  <p>Frequently requested and being worked on or considered:</p>
+  <p>Frequently requested, and either in progress or under consideration:</p>
   <ul>
     <li>Team icons and badges</li>
     <li>Cups with any number of teams, not just 4, 8 or 16</li>
@@ -340,10 +378,15 @@
 
   <footer>
     <p>
-      Tables is free, contains no ads, and collects no personal data.
-      All tournament data stays on your device.
+      Tables is free and contains no ads. All tournament data stays on your device.
+      The app collects usage and diagnostic statistics — see the
+      <a href="privacy_policy.html">privacy policy</a> for details.
     </p>
-    <p>&copy; <span id="year">2026</span> Dmitry Fomin</p>
+    <p>
+      <a href="privacy_policy.html">Privacy policy</a> &middot;
+      <a href="../impressum.html">Impressum</a>
+    </p>
+    <p>&copy; 2017&ndash;<span id="year">2026</span> Dmitrii Fomin</p>
   </footer>
 
 </div>
@@ -354,7 +397,7 @@
     var domain = ["gmail", "com"].join(".");
     var address = user + String.fromCharCode(64) + domain;
 
-    var body = [
+    var template = [
       "App version: ",
       "iOS version: ",
       "Device: ",
@@ -367,7 +410,47 @@
     if (link) {
       link.href = "mailto:" + address +
         "?subject=" + encodeURIComponent("Tables — support") +
-        "&body=" + encodeURIComponent(body);
+        "&body=" + encodeURIComponent(template);
+    }
+
+    var status = document.getElementById("copy-status");
+
+    function announce(message) {
+      if (status) { status.textContent = message; }
+    }
+
+    function fallbackCopy(text) {
+      var field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "absolute";
+      field.style.left = "-9999px";
+      document.body.appendChild(field);
+      field.select();
+      var copied = false;
+      try { copied = document.execCommand("copy"); } catch (error) { copied = false; }
+      document.body.removeChild(field);
+      return copied;
+    }
+
+    function report(copied) {
+      announce(copied
+        ? "Email address copied to the clipboard."
+        : "Couldn't copy automatically — please use the Email button instead.");
+    }
+
+    var copyButton = document.getElementById("copy-email");
+    if (copyButton) {
+      copyButton.addEventListener("click", function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(address).then(
+            function () { report(true); },
+            function () { report(fallbackCopy(address)); }
+          );
+        } else {
+          report(fallbackCopy(address));
+        }
+      });
     }
 
     var year = document.getElementById("year");
